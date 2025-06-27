@@ -1,0 +1,42 @@
+import React from 'react'
+const defaultBanner =
+  'https://res.cloudinary.com/drgdnsdvu/image/upload/v1750166946/react-app/react-app/banner1.jpg'
+
+const Banner = ({
+  newsLetter = '',
+  newsLetterClass = 'font-DM sans text-[12px] md:text-[18px] font-medium text-text-light-primary text-center leading-myline-2 tracking-myletter-2',
+  imageSrc = defaultBanner,
+  overlayOpacity = 80,
+  title = 'Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!',
+  description = 'Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda.',
+  titleClass = 'font-poppins text-2xl md:text-5xl font-bold text-text-light-primary text-center leading-myline-1 ',
+  descriptionClass = 'font-sans text-[14px] md:text-base font-medium text-text-light-primary text-center leading-myline-2 tracking-myletter-2',
+  children,
+}) => {
+  return (
+    <section className='w-full min-w-[320px] md:max-w-[1200px] rounded-[10px] h-fit relative flex items-center justify-center px-5 py-16 md:px-[140px] md:pt-[82px] md:pb-[64px] gap-6 md:gap-6 overflow-hidden'>
+      {/* Background */}
+      <div className='absolute inset-0'>
+        <img
+          src={imageSrc}
+          alt='Banner Background'
+          className='w-full h-full object-cover'
+        />
+        <div
+          className='absolute inset-0 bg-black'
+          style={{ opacity: overlayOpacity / 100 }}
+        />
+      </div>
+
+      {/* Konten */}
+      <div className='max-w-5xl mx-auto relative z-10 w-full text-center flex flex-col gap-3'>
+        <h3 className={newsLetterClass}>{newsLetter}</h3>
+        <h3 className={titleClass}>{title}</h3>
+        <p className={descriptionClass}>{description}</p>
+        {children}
+      </div>
+    </section>
+  )
+}
+
+export default Banner

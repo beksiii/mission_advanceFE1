@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "date": "2025-06-17T14:37:40.537Z",
+    "totalCourses": 9,
+    "successful": 9,
+    "failed": 0,
+    "endpoint": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+  },
+  "details": [
+    {
+      "success": true,
+      "id": 3,
+      "title": "Digital Marketing Mastery",
+      "url": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+    },
+    {
+      "success": true,
+      "id": 1,
+      "title": "Big 4 Auditor Financial Analyst",
+      "url": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+    },
+    {
+      "success": true,
+      "id": 2,
+      "title": "UI/UX Design Bootcamp",
+      "url": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+    },
+    {
+      "success": true,
+      "id": 5,
+      "title": "Front-End Web Development",
+      "url": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+    },
+    {
+      "success": true,
+      "id": 4,
+      "title": "Product Management Fundamentals",
+      "url": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+    },
+    {
+      "success": true,
+      "id": 9,
+      "title": "Public Speaking Masterclass",
+      "url": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+    },
+    {
+      "success": true,
+      "id": 7,
+      "title": "Copywriting untuk Pemula",
+      "url": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+    },
+    {
+      "success": true,
+      "id": 6,
+      "title": "Manajemen Waktu Efektif",
+      "url": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+    },
+    {
+      "success": true,
+      "id": 8,
+      "title": "Video Editing Profesional",
+      "url": "https://685173058612b47a2c0a21c1.mockapi.io/courses"
+    }
+  ]
+}

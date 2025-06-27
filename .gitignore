@@ -1,0 +1,36 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Optional: test coverage
+coverage/
+
+# Optional: local database files
+*.sqlite
+
+# Optional: Mac/Linux trash
+*.DS_Store
+.Trash-*

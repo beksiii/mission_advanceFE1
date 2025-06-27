@@ -1,0 +1,79 @@
+import React, { useState } from "react";
+import MainContainer from "../components/layout/MainContainer";
+import Navbar from "../components/layout/Navbar";
+import Banner from "../components/ui/Banner";
+import Button from "../components/form/Button";
+import CardSection from "../components/ui/CardSection";
+import Tabs from "../components/ui/Tabs";
+import Card from "../components/ui/Card";
+import courses from "../data/courses.js";
+import Footer from "../components/layout/Footer";
+
+export default function HomePage() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  return (
+    <>
+      <Navbar/>
+      <MainContainer>
+        <Banner>
+          <div className="mt-3 flex justify-center">
+            <div className="w-fit text-text-light-primary">
+              <Button variant="primary" onClick={() => console.log('Tombol diklik')}>
+                Temukan Video Course untuk Dipelajari!
+              </Button>
+            </div>
+          </div>
+        </Banner>
+
+        <CardSection 
+          title="Koleksi Video Pembelajaran Unggulan" 
+          subtitle="Jelajahi Dunia Pengetahuan Melalui Pilihan Kami"
+        >
+          <div className="mb-8">
+            <Tabs 
+              tabs={['Semua Kelas', 'Pemasaran', 'Desain', 'Pengembangan Diri', 'Bisnis']}
+              defaultTab={activeTab}
+              onTabChange={setActiveTab}
+            />
+          </div>
+          <div className="flex flex-wrap justify-between gap-y-6">
+            {courses.map((course) => (
+              <div key={course.id} className="w-full md:w-[32%]">
+                <Card {...course} />
+              </div>
+            ))}
+          </div>
+        </CardSection>
+
+        <Banner
+          imageSrc="/images/banner2.jpg"
+          newsLetter="NEWSLETTER"
+          title="Mau Belajar Lebih Banyak?"
+          titleClass="font-poppins text-2xl md:text-[32px] font-semibold text-text-light-primary text-center leading-myline-1"
+          description="Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran spesial dari program-program terbaik hariesok.id"
+          descriptionClass="font-sans text-[14px] md:text-[16px] font-normal text-text-light-primary text-center mx-auto leading-myline-2 tracking-myletter-2 max-w-[525px]"
+        >
+          <form 
+            id="newsletterForm"
+            className="w-full max-w-[525px] flex flex-col sm:flex-row gap-2 sm:gap-5 rounded-xl overflow-hidden shadow-sm border border-border-default bg-bg-primary mx-auto mt-5 py-2 pl-4 sm:pl-8 pr-2"
+          >
+            <input
+              type="email"
+              placeholder="Masukkan Emailmu"
+              className="flex-1 text-base text-text-dark-secondary placeholder:text-text-dark-secondary focus:outline-none bg-transparent px-2 py-3 sm:py-0"
+            />
+            <Button 
+              type="submit" 
+              variant="contained"
+              className="bg-secondary rounded-xl px-4 sm:px-6 py-2 sm:py-3 text-text-light-primary font-semibold text-sm md:text-base hover:bg-secondary-400 transition duration-300 w-full sm:w-auto"
+            >
+              Subscribe
+            </Button>
+          </form>
+        </Banner>
+      </MainContainer>
+      <Footer />
+      </>
+  );
+}
